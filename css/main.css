@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.ball {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transition: 1s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.ball.a {
+    background-color: #0a83a1;
+    left: 0;
+}
+
+.ball.b {
+    background-color: #018a7e;
+    right: 0;
+}
+
+.canasta {
+    position: relative;
+    height: 100px;
+    width: 100%;
+}
+
+.canasta:hover .ball.a {
+    left: calc(50% - 100px);
+}
+
+.canasta:hover .ball.b {
+    right: calc(50% - 100px);
+}
