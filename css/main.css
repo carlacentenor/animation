@@ -12,7 +12,8 @@ body {
 }
 
 .container:hover .cuadrado{
-    transform: rotate3d(0,0,1,45deg);
+    transform-origin: right top; /*puedes modificar en los dos ejers*/
+    transform: rotateZ(-45deg);
 }
 
 .cuadrado {
@@ -25,4 +26,5 @@ body {
     align-items: center;
     justify-content: center;
     transition: .3s;
+    transform-origin: left top; /*puedes modificar en los dos ejers*/
 }
