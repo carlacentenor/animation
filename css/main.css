@@ -13,7 +13,7 @@ body {
 }
 
 .container:hover .cuadrado {
-    transform: scale(2,.5);
+    transform: skew(10deg , 10deg);
     /* transform: scale(1) */
 }
 
