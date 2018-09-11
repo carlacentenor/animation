@@ -9,22 +9,39 @@ body {
 
 .container {
     border: 1px solid red;
+    width: 100%;
 }
 
-.container:hover .cuadrado{
-    transform-origin: right top; /*puedes modificar en los dos ejers*/
-    transform: rotateZ(-45deg);
+.container:hover .cuadrado {
+    animation-play-state: paused;
 }
 
 .cuadrado {
     display: flex;
     width: 200px;
     height: 200px;
+    border-radius: 50%;
     background-color: #7dc900;
     margin: 20px;
     font-size: 25px;
     align-items: center;
     justify-content: center;
-    transition: .3s;
-    transform-origin: left top; /*puedes modificar en los dos ejers*/
+    animation-name: cuadrado;
+    animation-duration: 2s;
+    /* animation-delay: 1s; */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    /* animation-fill-mode: forwards; */
+    position: relative;
+}
+
+@keyframes cuadrado {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: calc(100% - 240px);
+    }
 }
