@@ -1,80 +1,189 @@
 body {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
-    color: white;
-    font-family: Arial;
-  }
-  .container {
-    border: 1px solid red;
-    width: 100%;
-  }
-  /*.cuadrado:hover {*/
-  .container:hover .cuadrado {
-    animation-play-state: paused;
-  }
-  .cuadrado {
-    width: 200px;
-    height: 200px;
-    background: #7dc900;
-    margin: 20px;
-    border-radius: 50%;
-    /*transition: .3s;*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-name: cuadrado, rebote;
-    animation-duration: 3s, .3s;
-    /*animation-delay: 1s;*/
-    /*animation-iteration-count: 2;*/
-    animation-iteration-count:infinite,10;
-    /*animation-timing-function: ease;*/
-    /*animation-direction: reverse;*/
-    animation-direction: alternate;
-    /*animation-fill-mode: forwards;*/
-    /*animation-play-state: running;*/
-    /*animation-play-state: paused;*/
-    /*animation-timing-function: cubic-bezier(1, 1,1 ,1);*/
-    /*animation-timing-function: ease;*/
-    /*animation-timing-function: ease-in;*/
-    /*animation-timing-function: ease-out;*/
-    /*animation-timing-function: ease-in-out;*/
-    /*animation-timing-function: steps(5);*/
-    /*animation-timing-function: linear;*/
-    /*animation-timing-function: cubic-bezier(.75,-0.31,.33,1.4);*/
-    animation-timing-function: linear, ease-in-out;
-    position: relative;
-  }
-  @keyframes cuadrado {
-    0% {
-      /*opacity: 1;*/
-      left: 0;
-    }
-    100% {
-      /*opacity: 0;*/
-      left: calc(100% - 240px);
-    }
+  background: #d8ff7e;
+  background: -moz-linear-gradient(to right, #d8ff7e 0%, #97e7a2 100%);
+  background: -webkit-linear-gradient(to right, #d8ff7e 0%, #97e7a2 100%);
+  background: linear-gradient(to right, #d8ff7e 0%, #97e7a2 100%);
+}
+
+.box {
+  position: relative;
+  width: 600px;
+  height: 420px;
+  margin: auto;
+  margin-top: 8%;
+  display: block;
+
+}
+
+.head {
+  background-color: #A6BECF;
+  border-radius: 50%;
+  width: 50%;
+  height: 67%;
+  position: absolute;
+  top: 16.5%;
+  left: 25%;
+ 
+}
+
+
+
+.head-copy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #A6BECF;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.ear-left {
+  position: absolute;
+  left: -20%;
+  width: 60%;
+  height: 65%;
+  background-color: #A6BECF;
+  border-radius: 50%;
+  z-index: 1;
+  ;
+}
+
+.inner-ear {
+  background-color: #819CAF;
+  border-radius: 50%;
+  height: 80%;
+  width: 80%;
+  top: 10%;
+  left: 10%;
+  position: absolute;
+}
+
+.ear-rigth {
+  position: absolute;
+  right: -20%;
+  width: 60%;
+  height: 65%;
+  background-color: #A6BECF;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.eyes-left {
+  border-radius: 50%;
+  position: absolute;
+  left: 10%;
+  background-color: white;
+  height: 33%;
+  width: 30%;
+  top: 25%;
+  left: 21%;
+  z-index: 3;
+}
+
+.pupil {
+  border-radius: 50%;
+  position: absolute;
+  background-color: #27354A;
+  height: 28%;
+  width: 28%;
+  left: 36%;
+  top: 36%;
+  z-index: 5;
+  animation-name: eye;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
+
+
+@keyframes eye {
+  0% {
+    left: 72%;
   }
 
-  @keyframes escalera{
-      0%{
-          transform: translateY(0);
-
-      }
-      100%{
-        transform: translateY(500px);
-      }
-
+  100% {
+    left: 0%;
   }
+}
 
-  @keyframes rebote {
-    /*0% {*/
-    from {
-      transform: translateY(0);
-    }
-    /*100%*/
-    to {
-      transform: translateY(100px) scale(1, .8);
-    }
+
+.eyes-rigth {
+  height: 33%;
+  width: 30%;
+  right: 10%;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  z-index: 2;
+  top: 25%;
+  right: 21%;
+}
+
+.nose {
+  background-color: #BE845F;
+  width: 25%;
+  height: 42.5%;
+  position: absolute;
+  z-index: 4;
+  border-radius: 50px;
+  left: 37.5%;
+  top: 45%;
+}
+
+.hair-left {
+  position: absolute;
+  background-color: #A6BECF;
+  width: 20%;
+  height: 20%;
+  z-index: 4;
+  left: 48%;
+  top: -5%;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.hair-rigth {
+  position: absolute;
+  background-color: #A6BECF;
+  width: 20%;
+  height: 20%;
+  right: 48%;
+  z-index: 4;
+  top: -5%;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.hoja{
+  height: 100px;
+  width: 100px;
+  border: 1px solid rebeccapurple;
+  border-radius: 50%;
+  position: relative;
+  animation-name: rota;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate-reverse; */
+  animation-timing-function: linear;
+}
+
+
+@keyframes rota{
+  0%{
+    transform: rotate(0)
   }
+ 
+  100%{
+    transform: rotate(360deg)
+  }
+}
+
+.ball{
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  background-color: rgb(0, 255, 64);
+}
