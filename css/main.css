@@ -3,6 +3,8 @@ body {
   background: -moz-linear-gradient(to right, #d8ff7e 0%, #97e7a2 100%);
   background: -webkit-linear-gradient(to right, #d8ff7e 0%, #97e7a2 100%);
   background: linear-gradient(to right, #d8ff7e 0%, #97e7a2 100%);
+
+
 }
 
 .box {
@@ -23,7 +25,7 @@ body {
   position: absolute;
   top: 16.5%;
   left: 25%;
- 
+
 }
 
 
@@ -90,9 +92,9 @@ body {
   top: 36%;
   z-index: 5;
   animation-name: eye;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
   animation-timing-function: linear;
 }
 
@@ -155,35 +157,70 @@ body {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
-.hoja{
+.letter {
   height: 100px;
   width: 100px;
-  border: 1px solid rebeccapurple;
+
+  /* border: 1px solid rebeccapurple;  */
   border-radius: 50%;
   position: relative;
-  animation-name: rota;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  /* animation-direction: alternate-reverse; */
-  animation-timing-function: linear;
+
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  padding-left: 5.5em;
 }
 
 
-@keyframes rota{
-  0%{
+@keyframes rota {
+  0% {
     transform: rotate(0)
   }
- 
-  100%{
+
+  100% {
     transform: rotate(360deg)
   }
 }
 
-.ball{
+.ball {
   height: 20px;
   width: 20px;
   position: absolute;
   left: 0;
   border-radius: 50%;
-  background-color: rgb(0, 255, 64);
+  font-size: 2em;
+  font-family: 'Fredoka One', cursive;
+}
+
+.color1 {
+  color: #00a8b5
+}
+
+
+
+.color2 {
+  color: #774898
+}
+
+
+
+.color3 {
+  color: #e62a76
+}
+
+
+
+.color4 {
+  color: #fbb901
+}
+
+
+
+.color5 {
+  color: #00a8b5
 }
